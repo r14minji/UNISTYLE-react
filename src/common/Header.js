@@ -1,9 +1,12 @@
+import {NavLink} from "react-router-dom";
+
 function Header(){
+  const active = {color:"aqua"};
   return(
     <header id="header">
       <div class="inner">
         <nav class="menuWeb">
-          <h1><a href="index.html">UNISTYLE</a></h1>
+          <h1><NavLink activeStyle={active} exact to="/" >UNISTYLE</NavLink></h1>
   
           <div class="gnbWrap">
             <ul id="gnb_left">
