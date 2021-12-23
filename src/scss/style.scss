@@ -1,7 +1,20 @@
 @charset 'utf-8';
-@import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;500&display=swap');
 
-.box{
-  width: 100px; height: 100px;
-  background: aqua;
-}
+//반응형 setting
+$tablet :1179px;
+$mobile :539px;
+
+// 색상
+$green: #101820; //#02343F;
+$beige : #FFE9CF;
+$red: #821002;
+$gold: #d1ac8f;
+$darkblue: #52616b;
+$bgblue: #f0f5f9;
+$sky: #BFD9EB;
+
+@import 'reset';
+@import 'common/header';
+@import 'common/footer';
+@import 'common/layout';

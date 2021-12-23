@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -9,9 +10,293 @@ ol, ul {
 a {
   text-decoration: none; }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background: aqua; }
+/*----- header -----------------------------------------------------*/
+#header {
+  width: 100%;
+  background: #101820; }
+  #header .inner {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative; }
+    #header .inner .menuWeb {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 30px 0; }
+      #header .inner .menuWeb h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-22px, -50%); }
+        #header .inner .menuWeb h1 a {
+          font: normal 22px/1 'Monoton';
+          letter-spacing: 2px;
+          color: #FFE9CF; }
+      #header .inner .menuWeb .gnbWrap {
+        width: 100%;
+        display: flex;
+        justify-content: center; }
+        #header .inner .menuWeb .gnbWrap #gnb_left {
+          margin-right: 136px; }
+          #header .inner .menuWeb .gnbWrap #gnb_left > li {
+            float: left;
+            padding-right: 55px; }
+            #header .inner .menuWeb .gnbWrap #gnb_left > li > a {
+              font: 400 14px/1 'roboto condensed';
+              color: #ddd;
+              position: relative; }
+              #header .inner .menuWeb .gnbWrap #gnb_left > li > a::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 0px;
+                height: 3px;
+                transition: all 250ms ease-in-out;
+                opacity: 0;
+                background: #d1ac8f; }
+              #header .inner .menuWeb .gnbWrap #gnb_left > li > a:hover::after {
+                width: 100%;
+                opacity: 1; }
+              #header .inner .menuWeb .gnbWrap #gnb_left > li > a.on::after {
+                width: 100%;
+                opacity: 1; }
+        #header .inner .menuWeb .gnbWrap #gnb_right > li {
+          float: left;
+          margin-left: 30px; }
+          #header .inner .menuWeb .gnbWrap #gnb_right > li > a {
+            font: 400 14px/1 'roboto condensed';
+            position: relative;
+            color: #ddd; }
+            #header .inner .menuWeb .gnbWrap #gnb_right > li > a::after {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: -10px;
+              left: 0;
+              width: 0px;
+              height: 3px;
+              transition: all 250ms ease-in-out;
+              opacity: 0;
+              background: #d1ac8f; }
+            #header .inner .menuWeb .gnbWrap #gnb_right > li > a:hover::after {
+              width: 100%;
+              opacity: 1; }
+            #header .inner .menuWeb .gnbWrap #gnb_right > li > a.on::after {
+              width: 100%;
+              opacity: 1; }
+        #header .inner .menuWeb .gnbWrap > ul > li .sub {
+          display: none;
+          width: 1180px;
+          height: 300px;
+          background: #101820;
+          position: absolute;
+          right: 0;
+          top: 80px;
+          z-index: 6;
+          padding: 30px; }
+          #header .inner .menuWeb .gnbWrap > ul > li .sub ul {
+            width: 200px;
+            padding: 30px 20px;
+            border: 1px solid #FFF; }
+            #header .inner .menuWeb .gnbWrap > ul > li .sub ul > li {
+              width: 100%; }
+              #header .inner .menuWeb .gnbWrap > ul > li .sub ul > li a {
+                position: relative;
+                z-index: 6;
+                color: #fff;
+                display: inline-block;
+                font: normal 12px/1.2 "roboto condensed";
+                width: 150px;
+                height: 10px;
+                padding: 10px; }
+          #header .inner .menuWeb .gnbWrap > ul > li .sub:nth-of-type(1) {
+            padding: 0px; }
+          #header .inner .menuWeb .gnbWrap > ul > li .sub.depth2_dep strong {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: "roboto condensed";
+            color: #fff;
+            background: #ddd;
+            position: relative;
+            float: left; }
+          #header .inner .menuWeb .gnbWrap > ul > li .sub.depth2_dep ul {
+            float: left; }
+          #header .inner .menuWeb .gnbWrap > ul > li .sub.depth2_dep .sub_content {
+            float: left;
+            display: block;
+            width: 100px;
+            height: 200px;
+            border: 1px solid #ddd; }
+    #header .inner .btnCall {
+      display: none;
+      position: absolute;
+      top: 40%;
+      left: 0px;
+      z-index: 6;
+      width: 20px;
+      height: 20px;
+      border: #fff; }
+      #header .inner .btnCall::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 4px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(-1px);
+        transition: width 0.3s 0.4s; }
+      #header .inner .btnCall::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-1px);
+        transition: width 0.3s 0.4s; }
+      #header .inner .btnCall span {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        text-indent: -9999px; }
+        #header .inner .btnCall span::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #fff;
+          border-radius: 4px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transition: transform 0.3s; }
+        #header .inner .btnCall span::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #fff;
+          border-radius: 4px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          transition: transform 0.3s; }
+      #header .inner .btnCall.on::before {
+        width: 0; }
+      #header .inner .btnCall.on::after {
+        width: 0; }
+      #header .inner .btnCall.on span::before {
+        transform: rotate(45deg);
+        transition: transform 0.3s 0.8s; }
+      #header .inner .btnCall.on span::after {
+        transform: rotate(-45deg);
+        transition: transform 0.3s 0.8s; }
+    #header .inner .menuMo {
+      position: fixed;
+      top: 0;
+      left: -270px;
+      width: 270px;
+      height: 100vh;
+      background: #000;
+      transition: 0.5s;
+      padding: 25px 30px;
+      z-index: 5; }
+      #header .inner .menuMo.on {
+        left: 0px; }
+      #header .inner .menuMo h1 {
+        padding-bottom: 20px; }
+        #header .inner .menuMo h1 a {
+          display: block;
+          font: normal 20px/1 'Monoton';
+          color: #FFE9CF;
+          text-align: center;
+          letter-spacing: 2px; }
+      #header .inner .menuMo #gnbMo > li > a {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #ccc;
+        font: 500 14px/1 "roboto";
+        color: #ccc;
+        text-align: center; }
+        #header .inner .menuMo #gnbMo > li > a > img {
+          display: none; }
+
+/*----- footer --------------------------------------------------------*/
+#footer {
+  width: 100%;
+  background: #101820; }
+  #footer .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    padding: 80px 0 30px; }
+    #footer .inner h1 {
+      font: 700 20px/1 'roboto condensed';
+      color: #ddd;
+      letter-spacing: 5px;
+      margin-bottom: 40px;
+      text-align: center; }
+    #footer .inner ul {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px; }
+      #footer .inner ul li {
+        font: 400 14px/1 'roboto condensed';
+        color: #aaa;
+        margin-right: 30px; }
+        #footer .inner ul li:last-child {
+          margin-right: 0; }
+      #footer .inner ul.sns li a {
+        color: #bbb; }
+    #footer .inner span {
+      display: block;
+      text-align: center;
+      font: 400 12px/1 'roboto condensed';
+      letter-spacing: 3px;
+      color: #999;
+      margin-bottom: 30px; }
+
+/*----- content section -------------------------------*/
+.content {
+  width: 100%;
+  margin-bottom: 150px; }
+  .content .sub_visual {
+    width: 100%;
+    height: 500px;
+    background: #000; }
+    .content .sub_visual::after {
+      content: "";
+      display: block;
+      width: inherit;
+      height: inherit;
+      background-position: inherit;
+      background: #000;
+      opacity: 0.7; }
+  .content .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    .content .inner h1 {
+      font: 700 100px/1 'Roboto Condensed';
+      letter-spacing: 5px;
+      color: #fff;
+      position: absolute;
+      top: -85px;
+      left: 0; }
 
 /*# sourceMappingURL=style.css.map */
